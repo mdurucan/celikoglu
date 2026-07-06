@@ -87,7 +87,7 @@ nav a:hover::after { transform: scaleX(1); }
 .lang-toggle {
   background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.25);
   padding: .35rem .75rem; border-radius: var(--radius-full); font-size: .75rem; font-weight: 700;
-  cursor: pointer; margin-left: .75rem; letter-spacing: .05em; transition: all .2s;
+  cursor: pointer; margin-left: 1.5rem; letter-spacing: .05em; transition: all .2s;
   font-family: inherit;
 }
 .lang-toggle:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.4); }
