@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çelikoğlu Boat | Bodrum Tekne Turu & Yat Kiralama</title>
+<meta name="description" content="Bodrum'un kristal koylarında günlük tekne turu, özel yat kiralama, gün batımı turu ve organizasyon hizmetleri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div>
+        <span class="logo-text">Çelikoğlu <span>Boat</span></span>
+        <span class="logo-sub">Bodrum Tekne Turu</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#turlar">Turlar</a>
+      <a href="#rota">Rotalar</a>
+      <a href="#tekne">Tekne</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#yorumlar">Yorumlar</a>
+    </nav>
+    <a href="https://wa.me/905376513674?text=Merhaba!%20Bodrum%20tekne%20turu%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." target="_blank" class="nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+      WhatsApp ile Rezervasyon
+    </a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#turlar" onclick="closeMenu()">Turlar</a>
+    <a href="#rota" onclick="closeMenu()">Rotalar</a>
+    <a href="#tekne" onclick="closeMenu()">Tekne</a>
+    <a href="#galeri" onclick="closeMenu()">Galeri</a>
+    <a href="#yorumlar" onclick="closeMenu()">Yorumlar</a>
+    <a href="https://wa.me/905376513674" target="_blank" class="mob-cta">WhatsApp ile Rezervasyon</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 60V30C240 0 480 60 720 30C960 0 1200 60 1440 30V60H0Z" fill="white"/></svg>
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        2026 Sezonu · Özel Tekne Turu · WhatsApp Rezervasyon
+      </div>
+      <h1>Bodrum Tekne Turu <span class="accent">Çelikoğlu Boat</span> ile Denizde Özel Bir Gün</h1>
+      <p class="hero-desc">Günlük tekne turları, özel kutlamalar, gün batımı organizasyonları ve VIP yat kiralama</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/905376513674?text=Merhaba!%20Bodrum%20tekne%20turu%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." target="_blank" class="btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+          WhatsApp Rezervasyon
+        </a>
+        <a href="#turlar" class="btn-outline">Turları İncele ▾</a>
+      </div>
+    </div>
+    <div class="quick-form">
+      <p class="qf-title">Hızlı Teklif Al</p>
+      <p class="qf-sub">WhatsApp üzerinden anında dönüş</p>
+      <label class="qf-label">Tarih Seçin</label>
+      <input type="date" id="qfDate" class="qf-field" />
+      <label class="qf-label">Kişi Sayısı</label>
+      <select id="qfKisi" class="qf-field">
+        <option value="">Seçin...</option>
+        <option>1 Kişi</option><option>2 Kişi</option><option>3 Kişi</option><option>4 Kişi</option>
+        <option>5 Kişi</option><option>6 Kişi</option><option>7 Kişi</option><option>8 Kişi</option>
+        <option>9 Kişi</option><option>10+ Kişi</option>
+      </select>
+      <label class="qf-label">Tur Tipi</label>
+      <select id="qfTur" class="qf-field">
+        <option value="">Seçin...</option>
+        <option>Günlük Tekne Turu</option>
+        <option>Özel Yat Kiralama</option>
+        <option>Gün Batımı Turu</option>
+        <option>Kutlama &amp; Organizasyon</option>
+      </select>
+      <button class="btn-gold" onclick="sendQuickQuote()">
+        <svg width="18" height="18" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+        WhatsApp'tan Teklif Al
+      </button>
+      <p class="qf-note">Ücretsiz &nbsp;·&nbsp; Anında Dönüş &nbsp;·&nbsp; Komisyon Yok</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#e8950a,#c97b0a)"></div><div class="stat-val">4.9</div><div class="stat-label">Google Puanı</div><div class="stat-sub">Müşteri değerlendirmesi</div></div>
+    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#1a4275,#1e6091)"></div><div class="stat-val">9</div><div class="stat-label">5 Yıldızlı Yorum</div><div class="stat-sub">Doğrulanmış müşteriler</div></div>
+    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#22c55e,#16a34a)"></div><div class="stat-val">&lt;1 Saat</div><div class="stat-label">WhatsApp Dönüşü</div><div class="stat-sub">Hızlı yanıt garantisi</div></div>
+    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#0b1f3a,#1a4275)"></div><div class="stat-val">Sınırsız</div><div class="stat-label">Özel Rota</div><div class="stat-sub">Kendi rotanı belirle</div></div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="tours" id="turlar">
+  <div class="tours-inner">
+    <div class="section-header">
+      <span class="section-tag">Tur Seçenekleri</span>
+      <h2 class="section-title">Size Özel Bodrum Denizi</h2>
+      <p class="section-desc">Her bütçeye ve zevke uygun tur paketleri. WhatsApp üzerinden anında fiyat alın.</p>
+    </div>
+    <div class="tours-grid">
+      <div class="tour-card popular">
+        <div class="popular-banner">En Popüler Seçim</div>
+        <div class="tour-body">
+          <div class="tour-head"><span class="tour-badge" style="background:#f39c12;color:#fff">En Çok Tercih</span></div>
+          <div class="tour-title">Günlük Tekne Turu</div>
+          <div class="tour-dur">4–8 Saat</div>
+          <p class="tour-desc">Bodrum'un kristal berraklığındaki koylarında yüzme molaları, aile ve grup düzeni ile gün boyu rahat deniz rotası.</p>
+          <ul class="tour-features"><li>Birden fazla yüzme molası</li><li>Aile & grup düzeni</li><li>Gün boyu rahat rota</li><li>İkram dahil</li></ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20G%C3%BCnl%C3%BCk%20Tekne%20Turu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="tour-cta" style="background:linear-gradient(135deg,#f39c12,#e67e22)">WhatsApp'tan Fiyat Al</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-body">
+          <div class="tour-head"><span class="tour-badge" style="background:#1e3a6e;color:#fff">VIP</span></div>
+          <div class="tour-title">Özel Yat Kiralama</div>
+          <div class="tour-dur">Esnek Saat</div>
+          <p class="tour-desc">Tamamen size özel yat deneyimi. Kendi rotanızı belirleyin, özel ikram seçenekleriyle lüks bir gün geçirin.</p>
+          <ul class="tour-features"><li>Özel rota belirleme</li><li>VIP ikram seçenekleri</li><li>Müzik sistemi</li><li>Tam mahremiyet</li></ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20%C3%96zel%20Yat%20Kiralama%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="tour-cta" style="background:#1e3a6e">Teklif Al</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-body">
+          <div class="tour-head"><span class="tour-badge" style="background:#ec4899;color:#fff">Romantik</span></div>
+          <div class="tour-title">Gün Batımı Turu</div>
+          <div class="tour-dur">2–3 Saat</div>
+          <p class="tour-desc">Bodrum'un muhteşem gün batımını denizden izleyin. Doğum günü, evlilik teklifi ve fotoğraf odaklı özel organizasyonlar.</p>
+          <ul class="tour-features"><li>Gün batımı rotası</li><li>Fotoğraf odaklı</li><li>Özel organizasyon</li><li>Evlilik teklifi paketi</li></ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20G%C3%BCn%20Bat%C4%B1m%C4%B1%20Turu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="tour-cta" style="background:#ec4899">Rezervasyon Yap</a>
+      </div>
+      <div class="tour-card">
+        <div class="tour-body">
+          <div class="tour-head"><span class="tour-badge" style="background:#7c3aed;color:#fff">Grup</span></div>
+          <div class="tour-title">Kutlama & Organizasyon</div>
+          <div class="tour-dur">Teklif Bazlı</div>
+          <p class="tour-desc">Bekarlığa veda, doğum günü, şirket etkinliği ve özel kutlamalar için tam kapsamlı organizasyon hizmeti.</p>
+          <ul class="tour-features"><li>Bekarlığa veda</li><li>Doğum günü partisi</li><li>Şirket etkinliği</li><li>Dekorasyon dahil</li></ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20Kutlama%20organizasyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="tour-cta" style="background:#7c3aed">Müsaitlik Sor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="route" id="rota">
+  <div class="route-inner">
+    <div class="section-header">
+      <span class="section-tag">Günlük Program</span>
+      <h2 class="section-title">Rota Deneyimi</h2>
+      <p class="section-desc">Bodrum'un en güzel koylarını keşfederken size özel hazırlanmış rota deneyimi yaşayın.</p>
+    </div>
+    <div class="route-steps">
+      <div class="route-step">
+        <div class="step-left"><div class="step-dot">01</div><div class="step-line"></div></div>
+        <div class="step-card"><div class="step-meta"><span class="step-time">09:00</span></div><div class="step-title">Kalkış & Karşılama</div><p class="step-desc">Bodrum Kumbahçe Limanı'ndan hareket. Ekibimiz sizi karşılar, güvenlik brifingini yapar ve tekneyi tanıtır.</p></div>
+      </div>
+      <div class="route-step">
+        <div class="step-left"><div class="step-dot">02</div><div class="step-line"></div></div>
+        <div class="step-card"><div class="step-meta"><span class="step-time">10:30</span></div><div class="step-title">İlk Yüzme Molası</div><p class="step-desc">Bodrum'un en berrak koylarından birinde demirliyoruz. Snorkel, can yeleği ve yüzme ekipmanları hazır.</p></div>
+      </div>
+      <div class="route-step">
+        <div class="step-left"><div class="step-dot">03</div><div class="step-line"></div></div>
+        <div class="step-card"><div class="step-meta"><span class="step-time">13:00</span></div><div class="step-title">Öğle & İkram Molası</div><p class="step-desc">Gölgeli bir koyda öğle molası. Hafif ikramlar ve serinletici içecekler eşliğinde dinlenme zamanı.</p></div>
+      </div>
+      <div class="route-step">
+        <div class="step-left"><div class="step-dot">04</div><div class="step-line"></div></div>
+        <div class="step-card"><div class="step-meta"><span class="step-time">15:00</span></div><div class="step-title">İkinci Koy & Serbest Zaman</div><p class="step-desc">Bir sonraki koyta serbest yüzme, güneşlenme veya sadece denizin keyfini çıkarma zamanı.</p></div>
+      </div>
+      <div class="route-step">
+        <div class="step-left"><div class="step-dot">05</div><div class="step-line"></div></div>
+        <div class="step-card"><div class="step-meta"><span class="step-time">17:30</span></div><div class="step-title">Dönüş & Gün Batımı</div><p class="step-desc">Gün batımına eşlik eden muhteşem manzara ile limana dönüş. Unutulmaz anılar ve harika fotoğraflarla dolu bir gün.</p></div>
+      </div>
+    </div>
+    <p class="route-note">Program hava koşullarına göre değişebilir. Özel rota talepleriniz için <a href="https://wa.me/905376513674" target="_blank">WhatsApp</a>'tan iletişime geçin.</p>
+  </div>
+</section>
+
+<!-- BOAT DETAILS -->
+<section class="boat" id="tekne">
+  <div class="boat-inner">
+    <div class="boat-img-wrap">
+      <img src="assets/images/DJI_0049.jpg" alt="Çelikoğlu Boat" class="boat-img">
+      <div class="boat-badge-1"><div class="b1-num">9</div><div class="b1-txt">5★ Yorum</div></div>
+      <div class="boat-badge-2"><div class="b2-score">4.9</div><div class="b2-stars">★★★★★</div><div class="b2-txt">Google Puanı</div></div>
+    </div>
+    <div class="boat-right">
+      <span class="section-tag">Tekne Bilgileri</span>
+      <h2 class="section-title">Çelikoğlu Boat ile <span class="accent">Premium Deniz Deneyimi</span></h2>
+      <p class="boat-sub">Bodrum'un mavi sularında yılların deneyimiyle hizmet veren Çelikoğlu Boat, konfor ve güvenliği bir arada sunuyor.</p>
+      <div class="boat-details-grid">
+        <div class="detail-item"><div class="detail-label">Kapasite</div><div class="detail-val">Max 12 Kişi</div></div>
+        <div class="detail-item"><div class="detail-label">Kalkış Noktası</div><div class="detail-val">Kumbahçe Limanı</div></div>
+        <div class="detail-item"><div class="detail-label">Rota Seçenekleri</div><div class="detail-val">Özel / Hazır Rota</div></div>
+        <div class="detail-item"><div class="detail-label">İkram & Müzik</div><div class="detail-val">Dahil Edilebilir</div></div>
+        <div class="detail-item"><div class="detail-label">Özel Gün</div><div class="detail-val">Organizasyon Yapılır</div></div>
+        <div class="detail-item"><div class="detail-label">Hızlı Teklif</div><div class="detail-val">WhatsApp ile</div></div>
+      </div>
+      <a href="https://wa.me/905376513674?text=Merhaba!%20Tekne%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20istiyorum." target="_blank" class="btn-gold" style="width:auto;display:inline-flex;border-radius:.75rem;padding:1rem 2rem">
+        <svg width="18" height="18" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+        WhatsApp ile Bilgi Al
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <div class="section-header">
+      <span class="section-tag">Fiyatlandırma</span>
+      <h2 class="section-title">Paketlerimiz</h2>
+      <p class="section-desc">Tüm paketlerde WhatsApp üzerinden anında fiyat alabilirsiniz. Gizli ücret yok.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-header" style="background:#1e3a6e">
+          <div class="price-name">Standart Günlük Tur</div>
+          <div class="price-amount">WhatsApp Fiyat</div>
+          <div class="price-note">Kişi sayısına göre değişir</div>
+        </div>
+        <div class="price-body">
+          <p class="feat-label">Dahil Olanlar</p>
+          <ul class="feat-list">
+            <li class="yes">4-8 saatlik tur</li>
+            <li class="yes">Bodrum koyları rotası</li>
+            <li class="yes">Yüzme molaları</li>
+            <li class="yes">Müzik sistemi</li>
+            <li class="yes">Can yeleği & ekipman</li>
+            <li class="yes">Kaptan & ekip</li>
+          </ul>
+          <p class="feat-label">Dahil Değil</p>
+          <ul class="feat-list">
+            <li class="no">Özel ikram</li>
+            <li class="no">Dekorasyon</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20Standart%20G%C3%BCnl%C3%BCk%20Tur%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="price-cta" style="background:#1e3a6e">WhatsApp'tan Fiyat Al</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-header" style="background:linear-gradient(135deg,#f39c12,#e67e22)">
+          <div class="price-name">Özel Yat Kiralama</div>
+          <div class="price-amount">Teklif Al</div>
+          <div class="price-note">Tam özel kiralama</div>
+        </div>
+        <div class="price-body">
+          <p class="feat-label">Dahil Olanlar</p>
+          <ul class="feat-list">
+            <li class="yes">Esnek süre</li>
+            <li class="yes">Özel rota belirleme</li>
+            <li class="yes">VIP ikram paketi</li>
+            <li class="yes">Premium müzik sistemi</li>
+            <li class="yes">Fotoğrafçı (isteğe bağlı)</li>
+            <li class="yes">Özel dekorasyon</li>
+            <li class="yes">7/24 kaptan hizmeti</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20%C3%96zel%20Yat%20Kiralama%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="price-cta" style="background:linear-gradient(135deg,#f39c12,#e67e22)">Teklif Al</a>
+      </div>
+      <div class="price-card">
+        <div class="price-header" style="background:linear-gradient(135deg,#ec4899,#7c3aed)">
+          <div class="price-name">Gün Batımı / Kutlama</div>
+          <div class="price-amount">Müsaitlik Sor</div>
+          <div class="price-note">Özel organizasyon dahil</div>
+        </div>
+        <div class="price-body">
+          <p class="feat-label">Dahil Olanlar</p>
+          <ul class="feat-list">
+            <li class="yes">2-3 saatlik gün batımı turu</li>
+            <li class="yes">Romantik ortam</li>
+            <li class="yes">Kutlama dekorasyonu</li>
+            <li class="yes">Fotoğraf çekimi</li>
+            <li class="yes">Bekarlığa veda paketi</li>
+            <li class="yes">Doğum günü organizasyonu</li>
+          </ul>
+          <p class="feat-label">Dahil Değil</p>
+          <ul class="feat-list"><li class="no">Yüzme molası</li></ul>
+        </div>
+        <a href="https://wa.me/905376513674?text=Merhaba!%20G%C3%BCn%20Bat%C4%B1m%C4%B1%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="price-cta" style="background:linear-gradient(135deg,#ec4899,#7c3aed)">Müsaitlik Sor</a>
+      </div>
+    </div>
+    <p class="pricing-note">Tüm fiyatlar kişi sayısı ve tarihe göre değişir. WhatsApp ile anında teklif alın.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeri">
+  <div class="gallery-inner">
+    <div class="section-header">
+      <span class="section-tag">Galeri</span>
+      <h2 class="section-title">Anılar & Anlar</h2>
+      <p class="section-desc">Bodrum'un eşsiz güzelliklerini teknemizden keşfedin.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gal-item" onclick="openLightbox(0)"><img src="assets/images/gallery/celikogluboat-01.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Bodrum Koyları</span></div></div>
+      <div class="gal-item" onclick="openLightbox(1)"><img src="assets/images/gallery/celikogluboat-02.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Özel Yat</span></div></div>
+      <div class="gal-item" onclick="openLightbox(2)"><img src="assets/images/gallery/celikogluboat-03.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Yüzme Molası</span></div></div>
+      <div class="gal-item" onclick="openLightbox(3)"><img src="assets/images/gallery/celikogluboat-04.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Gün Batımı</span></div></div>
+      <div class="gal-item" onclick="openLightbox(4)"><img src="assets/images/gallery/celikogluboat-05.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Ege'nin Mavisi</span></div></div>
+      <div class="gal-item" onclick="openLightbox(5)"><img src="assets/images/gallery/celikogluboat-06.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Tekne Keyfi</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lb-close" onclick="closeLightboxBtn()">✕</button>
+  <button class="lb-prev" onclick="lbNav(-1)">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNav(1)">&#8250;</button>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="yorumlar">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <span class="section-tag">Müşteri Yorumları</span>
+      <h2 class="section-title">Deneyimleri Okuyun</h2>
+      <div class="reviews-score"><span class="stars">★★★★★</span><span class="score-num">4.9</span><span style="color:#999;font-size:.9rem">/ 9 değerlendirme</span></div>
+      <p style="color:#aaa;font-size:.85rem">Google'da doğrulanmış müşteri yorumları</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">AK</div><div><div class="reviewer-name">Ayşe K.</div><div class="reviewer-date">Haziran 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Harika bir deneyimdi! Çelikoğlu Boat ekibi çok profesyonel ve ilgiliydi. Bodrum'un en güzel koylarını gezdik. WhatsApp'tan hızlı dönüş aldık, rezervasyon çok kolaydı.</p><span class="review-tour">Günlük Tekne Turu</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">MA</div><div><div class="reviewer-name">Mehmet ve Ailesi</div><div class="reviewer-date">Mayıs 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Çocuklarımızla birlikte mükemmel bir gün geçirdik. Tekne çok temiz ve konforluydu. Kaptan bey çok deneyimli, güvendeyiz hissettik. Kesinlikle tavsiye ederim!</p><span class="review-tour">Özel Yat Kiralama</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">ZT</div><div><div class="reviewer-name">Zeynep T.</div><div class="reviewer-date">Temmuz 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Nişan organizasyonumuzu burada yaptık ve hayallerimizin ötesinde güzeldi. Dekorasyon mükemmeldi, ekip çok özenli davrandı. Teşekkürler Çelikoğlu Boat!</p><span class="review-tour">Kutlama & Organizasyon</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">CB</div><div><div class="reviewer-name">Can B.</div><div class="reviewer-date">Ağustos 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Gün batımı turu inanılmazdı. Bodrum'dan böyle bir manzara beklenmiyordu. Fotoğraflar çok güzel çıktı. Arkadaşlarıma mutlaka önereceğim.</p><span class="review-tour">Gün Batımı Turu</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">EB</div><div><div class="reviewer-name">Elif ve Burak</div><div class="reviewer-date">Haziran 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Bekarlığa veda organizasyonumuz için tercih ettik. Sürpriz hazırladılar, çok eğlendik. Fiyat/performans açısından da çok memnunuz. 5 yıldız hak ediyor!</p><span class="review-tour">Bekarlığa Veda</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">HÖ</div><div><div class="reviewer-name">Hasan Ö.</div><div class="reviewer-date">Temmuz 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">İkinci kez geldik ve yine aynı kalite. Koylar kristal berraklığında, tekne konforlu, ekip güler yüzlü. Bodrum'a her gelişimizde burası tercihimiz olacak.</p><span class="review-tour">Günlük Tekne Turu</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">SY</div><div><div class="reviewer-name">Selin Y.</div><div class="reviewer-date">Mayıs 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Şirket etkinliğimizi tekneye taşıdık. Çok farklı ve eğlenceli bir deneyim oldu. Ekip her konuda yardımcı oldu. Kesinlikle tekrar yapacağız!</p><span class="review-tour">Kurumsal Etkinlik</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">BA</div><div><div class="reviewer-name">Berk A.</div><div class="reviewer-date">Ağustos 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">WhatsApp üzerinden çok hızlı ve net bilgi aldık. Rezervasyon çok kolaydı. Tur boyunca profesyonel bir hizmet aldık. Çok memnunum.</p><span class="review-tour">Günlük Tekne Turu</span></div>
+      <div class="review-card"><div class="reviewer"><div class="reviewer-avatar">PM</div><div><div class="reviewer-name">Pınar M.</div><div class="reviewer-date">Temmuz 2026</div></div></div><div class="review-stars">★★★★★</div><p class="review-text">Doğum günümü teknede kutladım, hayatımın en güzel doğum günüydü. Sürpriz pasta ve dekorasyon harikaydı. Çelikoğlu Boat'a çok teşekkürler!</p><span class="review-tour">Doğum Günü Organizasyonu</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-header">
+      <span class="section-tag">Sık Sorulan Sorular</span>
+      <h2 class="section-title">Merak Ettikleriniz</h2>
+      <p class="section-desc">Cevabını bulamadıysanız WhatsApp'tan bize yazın.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Tur süresi ne kadar?<span class="faq-icon">+</span></button><div class="faq-a">Günlük tekne turlarımız 4 ila 8 saat sürmektedir. Özel yat kiralama ve kutlama organizasyonlarında süre tamamen size özel olarak belirlenir. Gün batımı turları 2-3 saat sürer.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Rotayı kendimiz belirleyebilir miyiz?<span class="faq-icon">+</span></button><div class="faq-a">Evet, kesinlikle! Özel yat kiralama paketimizde rotayı tamamen siz belirleyebilirsiniz. Standart tur paketimizde de tercihlerinizi bildirmeniz durumunda elimizden geldiğince uyum sağlarız.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Maksimum kaç kişi binebilir?<span class="faq-icon">+</span></button><div class="faq-a">Teknemiz maksimum 12 kişi kapasitesine sahiptir. 12 kişiden fazla grubunuz varsa birden fazla tur planlayabiliriz. Detaylar için WhatsApp'tan iletişime geçin.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Ödeme nasıl yapılıyor?<span class="faq-icon">+</span></button><div class="faq-a">Rezervasyon için kaparo almaktayız. Kalan ödeme tur günü nakit veya havale ile yapılabilir. WhatsApp üzerinden detayları konuşabilirsiniz.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Hava koşulları kötü olursa ne olur?<span class="faq-icon">+</span></button><div class="faq-a">Güvenliğiniz bizim önceliğimizdir. Olumsuz hava koşullarında turu erteliyor veya iade yapıyoruz. Bu konuda tamamen müşteri memnuniyeti odaklı çalışıyoruz.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Özel gün organizasyonu yapabiliyor musunuz?<span class="faq-icon">+</span></button><div class="faq-a">Evet! Doğum günü, nişan, evlilik teklifi, bekarlığa veda ve şirket etkinlikleri için özel organizasyon yapıyoruz. Dekorasyon, pasta ve fotoğrafçı gibi ekstra hizmetler de sağlayabiliriz.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">WhatsApp'tan nasıl rezervasyon yapabilirim?<span class="faq-icon">+</span></button><div class="faq-a">Sayfamızdaki WhatsApp butonlarından birine tıklayarak doğrudan mesaj atabilirsiniz. Tarih, kişi sayısı ve tur tipini belirtmeniz yeterli. 1 saat içinde dönüş garantisi veriyoruz.</div></div>
+    </div>
+    <div class="faq-cta-box">
+      <p>Başka sorunuz mu var?</p>
+      <a href="https://wa.me/905376513674?text=Merhaba!%20Tekne%20turu%20hakk%C4%B1nda%20sorum%20var." target="_blank" class="btn-wa" style="display:inline-flex">WhatsApp'tan Sorun</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-cta-band">
+    <h2>Bodrum'da Unutulmaz Bir Gün Sizi Bekliyor</h2>
+    <p>Hemen WhatsApp'tan yazın, 1 saat içinde dönüş garantisi.</p>
+    <a href="https://wa.me/905376513674?text=Merhaba!%20Bodrum%20tekne%20turu%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." target="_blank" class="btn-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+      WhatsApp ile Rezervasyon Yap
+    </a>
+  </div>
+  <div class="footer-body">
+    <div>
+      <div class="footer-logo"><span class="footer-logo-text">Çelikoğlu <span>Boat</span></span></div>
+      <p class="footer-about">Bodrum'un en güzel koylarında günlük tekne turları, özel yat kiralama ve organizasyon hizmetleri.</p>
+      <a href="https://wa.me/905376513674" target="_blank" class="footer-wa">
+        <svg width="14" height="14" viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+        +90 537 651 36 74
+      </a>
+    </div>
+    <div>
+      <h3>Hızlı Linkler</h3>
+      <ul class="footer-links">
+        <li><a href="#turlar">→ Turlar</a></li>
+        <li><a href="#rota">→ Rotalar</a></li>
+        <li><a href="#tekne">→ Tekne</a></li>
+        <li><a href="#galeri">→ Galeri</a></li>
+        <li><a href="#yorumlar">→ Yorumlar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>İletişim</h3>
+      <div class="contact-item"><div>Berk Balık karşısı, Kumbahçe<br>Bodrum / Muğla</div></div>
+      <div class="contact-item"><a href="tel:+905376513674">+90 537 651 36 74</a></div>
+      <div class="contact-item"><a href="https://wa.me/905376513674" target="_blank">WhatsApp Rezervasyon</a></div>
+      <div class="contact-item"><div>Her gün 08:00 – 20:00<br><span style="font-size:.75rem;color:rgba(255,255,255,.4)">Sezon boyunca açık</span></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Çelikoğlu Boat. Tüm hakları saklıdır.</p>
+    <p>Bodrum Tekne Turu · Özel Yat Kiralama · Gün Batımı Turu</p>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/905376513674?text=Merhaba!%20Tekne%20turu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="wa-float" title="WhatsApp ile İletişim">
+  <svg viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L0 24l6.335-1.502A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.384l-.361-.214-3.74.887.946-3.627-.235-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+</a>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
