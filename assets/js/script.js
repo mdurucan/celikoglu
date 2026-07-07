@@ -192,7 +192,7 @@ const translations = {
     footer_wa_link: 'WhatsApp Rezervasyon',
     footer_hours: 'Her gün 08:00 – 20:00<br><span style="font-size:.75rem;color:rgba(255,255,255,.4)">Sezon boyunca açık</span>',
     footer_season: 'Sezon boyunca açık',
-    footer_copy: '© 2026 Çelikoğlu Boat. Tüm hakları saklıdır.',
+    footer_copy: '© 2026 Çelikoğlu Boat. Tüm hakları saklıdır. · <a href="https://labdorado.com" target="_blank" class="powered-by">Powered by LabDorado</a>',
     footer_tags: 'Bodrum Tekne Turu · Özel Yat Kiralama · Gün Batımı Turu',
   },
   en: {
@@ -313,7 +313,7 @@ const translations = {
     footer_wa_link: 'WhatsApp Reservation',
     footer_hours: 'Every day 08:00 – 20:00<br><span style="font-size:.75rem;color:rgba(255,255,255,.4)">Open throughout the season</span>',
     footer_season: 'Open throughout the season',
-    footer_copy: '© 2026 Çelikoğlu Boat. All rights reserved.',
+    footer_copy: '© 2026 Çelikoğlu Boat. All rights reserved. · <a href="https://labdorado.com" target="_blank" class="powered-by">Powered by LabDorado</a>',
     footer_tags: 'Bodrum Boat Tour · Private Yacht Charter · Sunset Cruise',
   }
 };
