@@ -36,21 +36,47 @@ function toggleFaq(btn) {
 }
 
 // Lightbox
-const lbImages = [
-  { src: 'assets/images/gallery/celikogluboat-01.jpg', labelTR: 'Bodrum Koyları',  labelEN: 'Bodrum Bays' },
-  { src: 'assets/images/gallery/celikogluboat-02.jpg', labelTR: 'Özel Yat',        labelEN: 'Private Yacht' },
-  { src: 'assets/images/gallery/celikogluboat-03.jpg', labelTR: 'Yüzme Molası',    labelEN: 'Swimming Stop' },
-  { src: 'assets/images/gallery/celikogluboat-04.jpg', labelTR: 'Gün Batımı',      labelEN: 'Sunset' },
-  { src: 'assets/images/gallery/celikogluboat-05.jpg', labelTR: "Ege'nin Mavisi",  labelEN: 'Aegean Blue' },
-  { src: 'assets/images/gallery/celikogluboat-06.jpg', labelTR: 'Tekne Keyfi',     labelEN: 'Boat Fun' },
+const lbImagesTR = [
+  { src: 'assets/images/gallery/celikogluboat-01.jpg', label: 'Bodrum Koyları' },
+  { src: 'assets/images/gallery/celikogluboat-02.jpg', label: 'Özel Yat' },
+  { src: 'assets/images/gallery/celikogluboat-03.jpg', label: 'Yüzme Molası' },
+  { src: 'assets/images/gallery/celikogluboat-04.jpg', label: 'Gün Batımı' },
+  { src: 'assets/images/gallery/celikogluboat-05.jpg', label: "Ege'nin Mavisi" },
+  { src: 'assets/images/gallery/celikogluboat-06.jpg', label: 'Tekne Keyfi' },
+  { src: 'assets/images/gallery/01-tr.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/03-tr.jpeg', label: 'Çelikoğlu Boat' },
 ];
+const lbImagesEN = [
+  { src: 'assets/images/gallery/celikogluboat-01.jpg', label: 'Bodrum Bays' },
+  { src: 'assets/images/gallery/celikogluboat-02.jpg', label: 'Private Yacht' },
+  { src: 'assets/images/gallery/celikogluboat-03.jpg', label: 'Swimming Stop' },
+  { src: 'assets/images/gallery/celikogluboat-04.jpg', label: 'Sunset' },
+  { src: 'assets/images/gallery/celikogluboat-05.jpg', label: 'Aegean Blue' },
+  { src: 'assets/images/gallery/celikogluboat-06.jpg', label: 'Boat Fun' },
+  { src: 'assets/images/gallery/01-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/02-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/03-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/04-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/05-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/06-en.jpeg', label: 'Çelikoğlu Boat' },
+  { src: 'assets/images/gallery/07-en.jpeg', label: 'Çelikoğlu Boat' },
+];
+function currentGalleryImages() {
+  return document.documentElement.lang === 'en' ? lbImagesEN : lbImagesTR;
+}
+function renderGallery() {
+  const grid = document.getElementById('galleryGrid');
+  const images = currentGalleryImages();
+  grid.innerHTML = images.map((img, i) =>
+    `<div class="gal-item" onclick="openLightbox(${i})"><img src="${img.src}" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">${img.label}</span></div></div>`
+  ).join('');
+}
 let lbCurrent = 0;
 function openLightbox(i) {
   lbCurrent = i;
-  const lang = document.documentElement.lang;
-  document.getElementById('lbImg').src = lbImages[i].src;
-  const label = lang === 'en' ? lbImages[i].labelEN : lbImages[i].labelTR;
-  document.getElementById('lbCaption').textContent = (i+1) + ' / ' + lbImages.length + ' — ' + label;
+  const images = currentGalleryImages();
+  document.getElementById('lbImg').src = images[i].src;
+  document.getElementById('lbCaption').textContent = (i+1) + ' / ' + images.length + ' — ' + images[i].label;
   document.getElementById('lightbox').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -62,7 +88,8 @@ function closeLightboxBtn() {
   document.body.style.overflow = '';
 }
 function lbNav(dir) {
-  lbCurrent = (lbCurrent + dir + lbImages.length) % lbImages.length;
+  const images = currentGalleryImages();
+  lbCurrent = (lbCurrent + dir + images.length) % images.length;
   openLightbox(lbCurrent);
 }
 document.addEventListener('keydown', e => {
@@ -91,7 +118,7 @@ const translations = {
     // stats
     stat1_label: 'Google Puanı',   stat1_sub: 'Müşteri değerlendirmesi',
     stat2_label: '5 Yıldızlı Yorum', stat2_sub: 'Doğrulanmış müşteriler',
-    stat3_label: 'WhatsApp Dönüşü', stat3_sub: 'Hızlı yanıt garantisi',
+    stat3_val: '&lt;1 Saat', stat3_label: 'WhatsApp Dönüşü', stat3_sub: 'Hızlı yanıt garantisi',
     stat4_val: 'Sınırsız', stat4_label: 'Özel Rota', stat4_sub: 'Kendi rotanı belirle',
     // tours
     tours_tag: 'Tur Seçenekleri', tours_title: 'Size Özel Bodrum Denizi',
@@ -133,7 +160,7 @@ const translations = {
     boat_tag: 'Tekne Bilgileri',
     boat_title: 'Çelikoğlu Boat ile <span class="accent">Premium Deniz Deneyimi</span>',
     boat_sub: "Bodrum'un mavi sularında yılların deneyimiyle hizmet veren Çelikoğlu Boat, konfor ve güvenliği bir arada sunuyor.",
-    bd1_label: 'Kapasite', bd1_val: 'Max 12 Kişi',
+    bd1_label: 'Kapasite', bd1_val: 'Max 10 Kişi',
     bd2_label: 'Kalkış Noktası', bd2_val: 'Kumbahçe Limanı',
     bd3_label: 'Rota Seçenekleri', bd3_val: 'Özel / Hazır Rota',
     bd4_label: 'İkram & Müzik', bd4_val: 'Dahil Edilebilir',
@@ -172,7 +199,7 @@ const translations = {
     faq2_q: 'Rotayı kendimiz belirleyebilir miyiz?',
     faq2_a: 'Evet, kesinlikle! Özel yat kiralama paketimizde rotayı tamamen siz belirleyebilirsiniz. Standart tur paketimizde de tercihlerinizi bildirmeniz durumunda elimizden geldiğince uyum sağlarız.',
     faq3_q: 'Maksimum kaç kişi binebilir?',
-    faq3_a: 'Teknemiz maksimum 12 kişi kapasitesine sahiptir. 12 kişiden fazla grubunuz varsa birden fazla tur planlayabiliriz. Detaylar için WhatsApp\'tan iletişime geçin.',
+    faq3_a: 'Teknemiz maksimum 10 kişi kapasitesine sahiptir. 10 kişiden fazla grubunuz varsa birden fazla tur planlayabiliriz. Detaylar için WhatsApp\'tan iletişime geçin.',
     faq4_q: 'Ödeme nasıl yapılıyor?',
     faq4_a: 'Rezervasyon için kaparo almaktayız. Kalan ödeme tur günü nakit veya havale ile yapılabilir. WhatsApp üzerinden detayları konuşabilirsiniz.',
     faq5_q: 'Hava koşulları kötü olursa ne olur?',
@@ -212,7 +239,7 @@ const translations = {
     // stats
     stat1_label: 'Google Rating',   stat1_sub: 'Customer reviews',
     stat2_label: '5-Star Reviews',  stat2_sub: 'Verified customers',
-    stat3_label: 'WhatsApp Reply',  stat3_sub: 'Fast response guarantee',
+    stat3_val: '&lt;1 Hour', stat3_label: 'WhatsApp Reply',  stat3_sub: 'Fast response guarantee',
     stat4_val: 'Unlimited', stat4_label: 'Custom Route', stat4_sub: 'Set your own route',
     // tours
     tours_tag: 'Tour Options', tours_title: 'Bodrum Sea, Just for You',
@@ -254,7 +281,7 @@ const translations = {
     boat_tag: 'Boat Details',
     boat_title: 'Premium Sea Experience with <span class="accent">Çelikoğlu Boat</span>',
     boat_sub: 'Çelikoğlu Boat has been serving in the blue waters of Bodrum for years, offering comfort and safety together.',
-    bd1_label: 'Capacity', bd1_val: 'Max 12 People',
+    bd1_label: 'Capacity', bd1_val: 'Max 10 People',
     bd2_label: 'Departure Point', bd2_val: 'Kumbahçe Marina',
     bd3_label: 'Route Options', bd3_val: 'Custom / Ready Route',
     bd4_label: 'Catering & Music', bd4_val: 'Can Be Included',
@@ -293,7 +320,7 @@ const translations = {
     faq2_q: 'Can we set our own route?',
     faq2_a: 'Absolutely! With our private yacht charter, you can set the route entirely. For the standard tour, we accommodate your preferences as much as possible.',
     faq3_q: 'What is the maximum capacity?',
-    faq3_a: 'Our boat has a maximum capacity of 12 people. For groups larger than 12, we can plan multiple tours. Contact us via WhatsApp for details.',
+    faq3_a: 'Our boat has a maximum capacity of 10 people. For groups larger than 10, we can plan multiple tours. Contact us via WhatsApp for details.',
     faq4_q: 'How does payment work?',
     faq4_a: 'We collect a deposit for the reservation. The remaining balance can be paid on tour day by cash or bank transfer. Contact us via WhatsApp for details.',
     faq5_q: 'What happens if the weather is bad?',
@@ -325,7 +352,10 @@ function applyLang(lang) {
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
   document.documentElement.lang = lang;
-  document.getElementById('langBtn').textContent = lang === 'tr' ? 'EN' : 'TR';
+  renderGallery();
+  document.querySelectorAll('.lang-toggle').forEach(el => {
+    el.textContent = lang === 'tr' ? 'EN' : 'TR';
+  });
   document.title = lang === 'en'
     ? 'Çelikoğlu Boat | Bodrum Boat Tour & Yacht Charter'
     : 'Çelikoğlu Boat | Bodrum Tekne Turu & Yat Kiralama';
@@ -339,8 +369,8 @@ function toggleLang() {
 
 // Init: restore saved language
 (function() {
-  try {
-    const saved = localStorage.getItem('lang');
-    if (saved && saved !== 'tr') applyLang(saved);
-  } catch(e) {}
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch(e) {}
+  if (saved && saved !== 'tr') applyLang(saved);
+  else renderGallery();
 })();

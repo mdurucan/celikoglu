@@ -54,9 +54,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg viewBox="0 0 24 24"><path d="M20.5 10.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a8.5 8.5 0 0 1 17 0z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10.3" r="2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
       </a>
     </div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="mobile-controls">
+      <button class="lang-toggle mobile-lang-toggle" onclick="toggleLang()" aria-label="Dil değiştir">EN</button>
+      <a href="https://www.instagram.com/privateboatrentalbodrum" target="_blank" class="mobile-social-link" title="Instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://maps.app.goo.gl/Hpe7k2c8vANdbXQQ8?g_st=iwb" target="_blank" class="mobile-social-link" title="Google Maps" aria-label="Google Maps">
+        <svg viewBox="0 0 24 24"><path d="M20.5 10.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a8.5 8.5 0 0 1 17 0z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10.3" r="2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#turlar" onclick="closeMenu()" data-tr="Turlar" data-en="Tours">Turlar</a>
@@ -128,14 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title" data-i18n="gallery_title">Anılar & Anlar</h2>
       <p class="section-desc" data-i18n="gallery_desc">Bodrum'un eşsiz güzelliklerini teknemizden keşfedin.</p>
     </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gal-item" onclick="openLightbox(0)"><img src="assets/images/gallery/celikogluboat-01.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Bodrum Koyları</span></div></div>
-      <div class="gal-item" onclick="openLightbox(1)"><img src="assets/images/gallery/celikogluboat-02.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Özel Yat</span></div></div>
-      <div class="gal-item" onclick="openLightbox(2)"><img src="assets/images/gallery/celikogluboat-03.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Yüzme Molası</span></div></div>
-      <div class="gal-item" onclick="openLightbox(3)"><img src="assets/images/gallery/celikogluboat-04.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Gün Batımı</span></div></div>
-      <div class="gal-item" onclick="openLightbox(4)"><img src="assets/images/gallery/celikogluboat-05.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Ege'nin Mavisi</span></div></div>
-      <div class="gal-item" onclick="openLightbox(5)"><img src="assets/images/gallery/celikogluboat-06.jpg" alt="Çelikoğlu Boat" loading="lazy"><div class="gal-overlay"><span class="gal-label">Tekne Keyfi</span></div></div>
-    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
   </div>
 </section>
 
@@ -144,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="stats-inner">
     <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#e8950a,#c97b0a)"></div><div class="stat-val">4.9</div><div class="stat-label" data-i18n="stat1_label">Google Puanı</div><div class="stat-sub" data-i18n="stat1_sub">Müşteri değerlendirmesi</div></div>
     <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#1a4275,#1e6091)"></div><div class="stat-val">9</div><div class="stat-label" data-i18n="stat2_label">5 Yıldızlı Yorum</div><div class="stat-sub" data-i18n="stat2_sub">Doğrulanmış müşteriler</div></div>
-    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#22c55e,#16a34a)"></div><div class="stat-val">&lt;1 Saat</div><div class="stat-label" data-i18n="stat3_label">WhatsApp Dönüşü</div><div class="stat-sub" data-i18n="stat3_sub">Hızlı yanıt garantisi</div></div>
+    <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#22c55e,#16a34a)"></div><div class="stat-val" data-i18n="stat3_val">&lt;1 Saat</div><div class="stat-label" data-i18n="stat3_label">WhatsApp Dönüşü</div><div class="stat-sub" data-i18n="stat3_sub">Hızlı yanıt garantisi</div></div>
     <div class="stat-card"><div class="stat-bar" style="background:linear-gradient(90deg,#0b1f3a,#1a4275)"></div><div class="stat-val" data-i18n="stat4_val">Sınırsız</div><div class="stat-label" data-i18n="stat4_label">Özel Rota</div><div class="stat-sub" data-i18n="stat4_sub">Kendi rotanı belirle</div></div>
   </div>
 </section>
@@ -250,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title" data-i18n="boat_title">Çelikoğlu Boat ile <span class="accent">Premium Deniz Deneyimi</span></h2>
       <p class="boat-sub" data-i18n="boat_sub">Bodrum'un mavi sularında yılların deneyimiyle hizmet veren Çelikoğlu Boat, konfor ve güvenliği bir arada sunuyor.</p>
       <div class="boat-details-grid">
-        <div class="detail-item"><div class="detail-label" data-i18n="bd1_label">Kapasite</div><div class="detail-val" data-i18n="bd1_val">Max 12 Kişi</div></div>
+        <div class="detail-item"><div class="detail-label" data-i18n="bd1_label">Kapasite</div><div class="detail-val" data-i18n="bd1_val">Max 10 Kişi</div></div>
         <div class="detail-item"><div class="detail-label" data-i18n="bd2_label">Kalkış Noktası</div><div class="detail-val" data-i18n="bd2_val">Kumbahçe Limanı</div></div>
         <div class="detail-item"><div class="detail-label" data-i18n="bd3_label">Rota Seçenekleri</div><div class="detail-val" data-i18n="bd3_val">Özel / Hazır Rota</div></div>
         <div class="detail-item"><div class="detail-label" data-i18n="bd4_label">İkram & Müzik</div><div class="detail-val" data-i18n="bd4_val">Dahil Edilebilir</div></div>
@@ -387,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq-list">
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq1_q">Tur süresi ne kadar?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq1_a">Günlük tekne turlarımız 4 ila 8 saat sürmektedir. Özel yat kiralama ve kutlama organizasyonlarında süre tamamen size özel olarak belirlenir. Gün batımı turları 2-3 saat sürer.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq2_q">Rotayı kendimiz belirleyebilir miyiz?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq2_a">Evet, kesinlikle! Özel yat kiralama paketimizde rotayı tamamen siz belirleyebilirsiniz. Standart tur paketimizde de tercihlerinizi bildirmeniz durumunda elimizden geldiğince uyum sağlarız.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq3_q">Maksimum kaç kişi binebilir?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq3_a">Teknemiz maksimum 12 kişi kapasitesine sahiptir. 12 kişiden fazla grubunuz varsa birden fazla tur planlayabiliriz. Detaylar için WhatsApp'tan iletişime geçin.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq3_q">Maksimum kaç kişi binebilir?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq3_a">Teknemiz maksimum 10 kişi kapasitesine sahiptir. 10 kişiden fazla grubunuz varsa birden fazla tur planlayabiliriz. Detaylar için WhatsApp'tan iletişime geçin.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq4_q">Ödeme nasıl yapılıyor?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq4_a">Rezervasyon için kaparo almaktayız. Kalan ödeme tur günü nakit veya havale ile yapılabilir. WhatsApp üzerinden detayları konuşabilirsiniz.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq5_q">Hava koşulları kötü olursa ne olur?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq5_a">Güvenliğiniz bizim önceliğimizdir. Olumsuz hava koşullarında turu erteliyor veya iade yapıyoruz. Bu konuda tamamen müşteri memnuniyeti odaklı çalışıyoruz.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq6_q">Özel gün organizasyonu yapabiliyor musunuz?</span><span class="faq-icon">+</span></button><div class="faq-a" data-i18n="faq6_a">Evet! Doğum günü, nişan, evlilik teklifi, bekarlığa veda ve şirket etkinlikleri için özel organizasyon yapıyoruz. Dekorasyon, pasta ve fotoğrafçı gibi ekstra hizmetler de sağlayabiliriz.</div></div>
